@@ -1,0 +1,45 @@
+body {
+	background: url("../images/background.png");
+	background-repeat: repeat;
+	background-size: contain;
+	color: #fff;
+}
+p {
+	font-weight: 300;
+}
+h1 {
+	font-weight: 800;
+}
+.hero-section {
+	padding: 100px 0px;
+	align-items: center;
+}
+
+footer {
+	display: none;
+	background: linear-gradient(-10deg, #ffffff 50%, #2D9637 50%);
+	overflow: hidden;
+	position: relative;
+	bottom: -100px;
+	min-width: 100%;
+	height: 300px;
+	text-align: center;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+	body {
+	  text-align: center;
+	}
+	h1 {
+		font-weight: 900;
+	}
+	p {
+		font-weight: 200;
+	}
+	footer {
+		height: 200px;
+	}
+  }
