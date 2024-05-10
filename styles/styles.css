@@ -41,6 +41,10 @@ footer {
 	p {
 		font-weight: 200;
 	}
+	.hero-section {
+		align-items: flex-start;
+		padding: 0px;
+	}
 	footer {
 		height: 200px;
 	}
