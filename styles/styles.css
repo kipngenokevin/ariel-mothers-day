@@ -27,7 +27,7 @@ h3 {
 .dotted-border {
 	border: 2px dotted #fff;
 	width: fit-content;
-	height: 300px;
+	height: 12rem;
 	display: flex;
 	align-items: center;
 	margin: auto;
