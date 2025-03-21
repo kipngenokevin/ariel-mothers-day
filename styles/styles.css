@@ -1,9 +1,21 @@
 body {
-	background: url("../images/background-min.png");
-	background-size: contain;
-	background-repeat: repeat;
+	margin: 0;
 	color: #fff;
-	padding: 100px 0px;
+	background: url("../images/backdrop-square.png");
+	font-family: Nunito, Helvetica, Arial, sans-serif;
+}
+
+header {
+	margin: 2rem 0;
+}
+
+main {
+	background: url("../images/backdrop.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 60vh;
+	top: 0;
+	position: relative;
 }
 p {
 	font-weight: 300;
@@ -23,29 +35,35 @@ h3 {
 
 .medium-gap {
 	justify-content: center;
-	gap: 100px;
+	gap: 2rem;
 	display: flex;
 	flex-direction: column;
 }
 
 footer {
-	position: absolute;
+	/* position: absolute; */
 	bottom: 0px;
-	padding: 100px;
-	height: 400px;
 	min-width: 100%;
-	background: linear-gradient(-9deg, white 50%, transparent 50%);
+	background-image: url("../images/bottom.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: -4rem;
+	/* background: linear-gradient(-9deg, white 50%, transparent 50%); */
+}
+
+.bottom {
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
 }
 
 
 
 
-
 @media only screen and (max-width: 768px) {
-	body {
-	  text-align: center;
-	  padding: 50px 0px;
-	}
 	h1 {
 		font-weight: 900;
 	}
@@ -53,10 +71,11 @@ footer {
 		font-weight: 200;
 	}
 	.medium-gap {
-		gap: 50px;
+		gap: 2rem;
 	}
 	.hero-section {
 		align-items: flex-start;
 		padding: 0px;
 	}
+	
   }
