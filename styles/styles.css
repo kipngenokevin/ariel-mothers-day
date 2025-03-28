@@ -60,6 +60,11 @@ footer {
 	justify-content: center;
 }
 
+iframe {
+	width: 100%;
+	min-height: 28rem;
+}
+
 
 
 
