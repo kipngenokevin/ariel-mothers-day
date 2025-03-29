@@ -1,3 +1,10 @@
+:root {
+    --body-font-family: 'Raleway';
+    --green-text-color: rgb(29, 187, 29);
+    --transaparent-green: rgba(96, 228, 111, 0.7); 
+    --body-background: rgba(142, 203, 149, 0.1);
+}
+
 body {
 	margin: 0;
 	color: #fff;
@@ -69,6 +76,42 @@ iframe {
 	width: 12rem;
 }
 
+/* VIDEO SECTION CSS */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 5px 8px rgba(35, 34, 34, 0.322);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--transaparent-green);
+    border: none;
+    border-radius: 1rem;
+    padding: 0.4rem 2rem;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--green-text-color);
+}
 
 
 

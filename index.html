@@ -20,31 +20,77 @@
 					<img class="img-fluid logo-img" src="https://static.vecteezy.com/system/resources/previews/019/879/213/non_2x/video-camera-symbol-video-camera-icon-symbol-illustration-on-transparent-background-free-png.png" alt="Showmax Logo">
 					<br>
 					<br>
-					<h1>host your videos here for free</h1>
+					<h1>Cool things about Zimbabwe</h1>
 				</div>
 			</div>
 		</div>
 	</header>
-	<main>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 text-center medium-gap">
-					<p>Share with us your video and we will make sure to show it to your friends!</p>
-					<h3>UPLOAD VIDEO HERE</h3>
-					<a  class="" href="https://docs.google.com/forms/d/e/1FAIpQLSfKbBf46E1kGvPNSvxSlrDmeE7jfY1bhVd1GcOe0u7sSmUEAw/viewform?usp=dialog">
-						<div class="dotted-border">
-							<img class="img-fluid" src="images/upload.png" width="250px" alt="upload">
-						</div>
-					</a>	
+	
+	<main class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+				<!-- Video container with play button -->
+				<div class="video-container">
+					<video id="video1" class="img-fluid">
+						<source src="images/welcome-zimbabwe.mp4" type="video/mp4">
+						Your browser does not support HTML video.
+					</video>
+					<button class="play-button" data-video="video1">▶</button>
+					<h3>Welcome to Zimbabwe</h3>
+				</div>
+				<div class="video-container">
+					<video id="video2" class="img-fluid">
+						<source src="images/fun-facts.mp4" type="video/mp4">
+						Your browser does not support HTML video.
+					</video>
+					<button class="play-button" data-video="video2">▶</button>
+					<h3>5 Fun Facts about Zimbabwe</h3>
+				</div>
+				<div class="video-container">
+					<video id="video3" class="img-fluid">
+						<source src="images/cuisine.mp4" type="video/mp4">
+						Your browser does not support HTML video.
+					</video>
+					<button class="play-button" data-video="video3">▶</button>
+					<h3>Zimbabwean Cuisine by Liz</h3>
+				</div>
+				<div class="video-container">
+					<video id="video4" class="img-fluid">
+						<source src="images/more-facts.mp4" type="video/mp4">
+						Your browser does not support HTML video.
+					</video>
+					<button class="play-button" data-video="video4">▶</button>
+					<h3>More Fun Facts about Zimbabwe by Amani.G</h3>
 				</div>
 			</div>
-		</div>
-	</main>
+			
+			
+			
+        </div>
+    </main>
 
-	<article>
-		<h2>Reponses</h2>
-		<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS3PQdT0ljC9Rq8RpJ-7AIYZp6r1jqeYkQwYlXKaMj-hKQGkNJpi_MLx6wL1M41WnumAsUBQJltMA6-/pubhtml?gid=25796282&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-	</article>
+	!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+			<script>
+				$(document).ready(function() {
+					// Play video and hide play button
+					$('.play-button').click(function() {
+						const videoId = $(this).data('video');
+						const video = document.getElementById(videoId);
+						video.play();
+						$(this).hide();  // Hide play button when video starts playing
+				
+						// Pause video and show play button when user clicks on the video
+						$(video).click(function() {
+							if (!video.paused) {
+								video.pause();
+								$(`[data-video='${videoId}']`).show();  // Show play button again
+							}
+						});
+					});
+				});
+			</script>
 	
 </body>
 </html>
